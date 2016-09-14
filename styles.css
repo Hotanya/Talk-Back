@@ -16,6 +16,7 @@ html {
 }
 
 textarea {
+  background-image: url("background.jpg");
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -34,6 +35,23 @@ text-align: center;
   bottom: 0px;
 }
 
+#megaman{
+  position: absolute;
+  left: 200px;
+  bottom: 80px;
+}
+
+#speechbubble{
+  position: absolute;
+  left: 300px;
+  bottom: 150px;
+}
+
+#stop_button_div{
+  padding-left: 50%;
+  }
+
 #stop_button{
-  padding-left: 50%
+  background-color: red;
+  color: white;
 }

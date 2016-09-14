@@ -29,8 +29,11 @@
 
 <p>Highlight the text to be spoken out loud</p> 
 
-<div id = stop_button> 
-  <input 
+<img id= "megaman" src="Images/megaphone_man.png" alt="Man With Megaphone">
+<img id= "speechbubble" src="Images/speech_bubble.png" alt="Speech Bubble">
+
+<div id = stop_button_div> 
+  <input id = stop_button 
   onclick="responsiveVoice.cancel($('#text').val(),$('#voiceselection').val());" 
   type="button" 
   value="Stop" >
