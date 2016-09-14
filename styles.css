@@ -29,6 +29,11 @@ font-size: 24px;
 text-align: center;
 }
 
+#foot{
+  position: fixed;
+  bottom: 0px;
+}
+
 #stop_button{
   padding-left: 50%
 }
