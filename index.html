@@ -15,9 +15,13 @@
     </head>
     
     <body>
-        <header id="app_name">
-            Talk Back
-    </header>
+        
+<div id= "app_name">
+        
+    <header>
+        Talk Back
+    </header>    
+</div>
 
     <div>
         <textarea id = "textarea" placeholder="Enter something..." rows = "7" cols = "100"></textarea>
@@ -25,7 +29,7 @@
 
 <p>Highlight the text to be spoken out loud</p> 
 
-<div> 
+<div id = stop_button> 
   <input 
   onclick="responsiveVoice.cancel($('#text').val(),$('#voiceselection').val());" 
   type="button" 
