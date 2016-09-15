@@ -36,26 +36,30 @@
 
     <div>
         <textarea id = "textarea" placeholder="Enter something..."rows = "7" cols = "100"></textarea>
+        <p>Highlight the text to be spoken out loud</p> 
     </div>
 
-<p>Highlight the text to be spoken out loud</p> 
+
 
 <img id= "megaman" src="Images/megaphone_man.png" alt="Man With Megaphone">
 
 <div id = stop_button_div> 
-  <input id = stop_button 
-  onclick="responsiveVoice.cancel($('#text').val(),$('#voiceselection').val());" 
+  <input id="stop_button"
+  onclick="responsiveVoice.cancel($('#textarea').val(),$('#voiceselection').val());" 
   type="button" 
-  value="Stop" >
+  value="Stop" 
+/>
 </div>
 
+
 <div id= clear_button_div> 
- <input id = clear_button 
+ <input id = "clear_button" 
         class= "clear"
         type= "button"
         value = "Clear"
         onclick="javascript: clearText();"
  
+
 </div>
 <script>
 
@@ -81,6 +85,26 @@ automatically in just a few seconds.
        
     window.appInsights=appInsights;
     appInsights.trackPageView();
+</script>
+
+<script type= "text/javascript">
+    var telemetry = new RequestTelemetry();
+    // Note: A single instance of telemetry client is sufficient to track multiple telemetry items.
+    var ai = new TelemetryClient();
+    // At start of processing this request:
+    // Operation Id and Name are attached to all telemetry and help you identify
+    // telemetry associated with one request:
+    telemetry.Context.Operation.Id = Guid.NewGuid().ToString();
+    telemetry.Context.Operation.Name = "requestName";
+
+    var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
+    // ... process the request ...
+
+    stopwatch.Stop();
+    ai.TrackRequest("requestName", DateTime.UtcNow, stopwatch.Elapsed, "200", true);  
+    // Response code, success
+    
 </script>
 
 <div id = foot>

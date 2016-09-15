@@ -50,10 +50,10 @@ text-align: center;
 }
 
 #stop_button_div{
-  position: absolute;
-  padding-left: 50%;
-  right: 23.6%;
-  bottom: 30.1%;
+ position: absolute;
+  padding-right: 50%;
+  left: 23.6%;
+  bottom: 22.1%;
   }
 
 #clear_button_div{
@@ -75,6 +75,22 @@ text-align: center;
   color: white;
   height: 50px ;
   width: 100px ;
+}
+
+#clear_button:hover {background-color: #3e8e41}
+
+#button:active {
+  background-color: limegreen;
+  box-shadow: 0 50px black;
+  transform: translateY(50px);
+}
+
+#stop_button:hover {background-color: red}
+
+#button:active {
+  background-color: darkred;
+  box-shadow: 0 50px black;
+  transform: translateY(50px);
 }
 
 *::-webkit-input-placeholder {
