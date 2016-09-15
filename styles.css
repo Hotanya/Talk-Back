@@ -22,6 +22,7 @@ textarea {
   margin-right: auto;
   margin-top: 15%;
   margin-bottom: auto;
+  border: 3px solid black;
 }
 
 p {
@@ -33,12 +34,13 @@ text-align: center;
 #foot{
   position: fixed;
   bottom: 0px;
+  left: 0px;
 }
 
 #megaman{
   position: absolute;
-  left: 200px;
-  bottom: 80px;
+  left: 130px;
+  bottom: 40px;
 }
 
 #speechbubble{
@@ -48,10 +50,46 @@ text-align: center;
 }
 
 #stop_button_div{
+  position: absolute;
   padding-left: 50%;
+  right: 23.6%;
+  bottom: 30.1%;
+  }
+
+#clear_button_div{
+  position: absolute;
+  padding-right: 50%;
+  left: 23.6%;
+  bottom: 30.1%;
   }
 
 #stop_button{
   background-color: red;
   color: white;
+  height: 50px ;
+  width: 100px ;
+}
+
+#clear_button{
+  background-color: slateblue;
+  color: white;
+  height: 50px ;
+  width: 100px ;
+}
+
+*::-webkit-input-placeholder {
+    color: black;
+    
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: black;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: black;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
 }

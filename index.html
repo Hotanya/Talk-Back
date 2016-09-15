@@ -6,15 +6,26 @@
 
         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-    <head>
-        <title>Talk Back</title>
-        <link rel = "text/javascript" href="basic.js">
-        <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
-        <script src='//vws.responsivevoice.com/v/e?key=8QiBKugZ'></script>
+<head>
+    <title>Talk Back</title>
 
-    </head>
+
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src='//vws.responsivevoice.com/v/e?key=8QiBKugZ'></script>
+
+</head>
     
-    <body>
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
         
 <div id= "app_name">
         
@@ -24,13 +35,12 @@
 </div>
 
     <div>
-        <textarea id = "textarea" placeholder="Enter something..." rows = "7" cols = "100"></textarea>
+        <textarea id = "textarea" placeholder="Enter something..."rows = "7" cols = "100"></textarea>
     </div>
 
 <p>Highlight the text to be spoken out loud</p> 
 
 <img id= "megaman" src="Images/megaphone_man.png" alt="Man With Megaphone">
-<img id= "speechbubble" src="Images/speech_bubble.png" alt="Speech Bubble">
 
 <div id = stop_button_div> 
   <input id = stop_button 
@@ -39,8 +49,9 @@
   value="Stop" >
 </div>
 
-<div> 
- <input class= "clear"
+<div id= clear_button_div> 
+ <input id = clear_button 
+        class= "clear"
         type= "button"
         value = "Clear"
         onclick="javascript: clearText();"
@@ -73,8 +84,14 @@ automatically in just a few seconds.
 </script>
 
 <div id = foot>
+
+    <div class="fb-share-button" data-href="https://www.talk-back.azurewebsites.net" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.talk-back.azurewebsites.net%2F&amp;src=sdkpreparse">Share</a>
+    </div>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <footer>
-    Copyright Hotanya Ragtah 2016
+    <b> Copyright Hotanya Ragtah 2016 </b>
 </footer>
 </div>
 
